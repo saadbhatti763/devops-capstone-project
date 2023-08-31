@@ -30,7 +30,7 @@ jobs:
          uses: actions/checkout@v2
        - name: Install dependencies
          run: |
-            pyhton -m pip install --upgrade pip wheel
+            python -m pip install --upgrade pip wheel
             pip install -r requirements
        - name: Lint with flake8
          run: |
