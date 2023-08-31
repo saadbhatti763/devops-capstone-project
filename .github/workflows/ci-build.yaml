@@ -18,7 +18,7 @@ jobs:
          - 5432:5432
         env:
           POSTGRES_PASSWORD: pgs3cr3t
-          
+
           POSTGRES_DB: testdb
         options:
          --health-cmd pg_isready
@@ -27,7 +27,7 @@ jobs:
          --helath-retries 5
     steps:
        - name: Checkout
-         uses: action/checkout@v2
+         uses: actions/checkout@v2
        - name: Install dependencies
          run: |
             pyhton -m pip install --upgrade pip wheel
